@@ -1,0 +1,30 @@
+{
+  "name": "@wdysa/core",
+  "version": "0.1.0",
+  "description": "Plugin loader and session engine for wdysa",
+  "type": "module",
+  "exports": "./src/index.js",
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "wdysa",
+    "claude-code",
+    "codex",
+    "cli"
+  ],
+  "author": "obov <obov3e@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obov/what-did-you-say-again.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/obov/what-did-you-say-again#readme",
+  "bugs": {
+    "url": "https://github.com/obov/what-did-you-say-again/issues"
+  }
+}

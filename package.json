@@ -1,0 +1,14 @@
+{
+  "name": "wdysa-monorepo",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "engines": {
+    "node": ">=20.12"
+  }
+}

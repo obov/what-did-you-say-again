@@ -1,0 +1,33 @@
+{
+  "name": "@wdysa/output-markdown",
+  "version": "0.1.0",
+  "description": "wdysa output plugin: Markdown transcript",
+  "type": "module",
+  "exports": "./index.js",
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "@wdysa/core": "0.1.0"
+  },
+  "keywords": [
+    "wdysa",
+    "claude-code",
+    "codex",
+    "cli"
+  ],
+  "author": "obov <obov3e@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obov/what-did-you-say-again.git",
+    "directory": "packages/output-markdown"
+  },
+  "homepage": "https://github.com/obov/what-did-you-say-again#readme",
+  "bugs": {
+    "url": "https://github.com/obov/what-did-you-say-again/issues"
+  }
+}

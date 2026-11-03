@@ -1,0 +1,47 @@
+{
+  "name": "wdysa",
+  "version": "0.1.0",
+  "description": "Print recent conversations from closed Claude Code, Codex, or any plugin-defined agent session",
+  "type": "module",
+  "bin": {
+    "wdysa": "bin/wdysa.js"
+  },
+  "files": [
+    "bin"
+  ],
+  "dependencies": {
+    "@wdysa/core": "0.1.0",
+    "@wdysa/harness-claude": "0.1.0",
+    "@wdysa/harness-codex": "0.1.0",
+    "@wdysa/output-json": "0.1.0",
+    "@wdysa/output-markdown": "0.1.0",
+    "@wdysa/output-terminal": "0.1.0"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "codex",
+    "cli",
+    "session",
+    "history",
+    "transcript"
+  ],
+  "author": "obov <obov3e@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.12"
+  },
+  "scripts": {
+    "prepack": "cp ../../README.md README.md",
+    "postpack": "rm -f README.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obov/what-did-you-say-again.git",
+    "directory": "packages/wdysa"
+  },
+  "homepage": "https://github.com/obov/what-did-you-say-again#readme",
+  "bugs": {
+    "url": "https://github.com/obov/what-did-you-say-again/issues"
+  }
+}

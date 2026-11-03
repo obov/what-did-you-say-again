@@ -1,0 +1,34 @@
+{
+  "name": "@wdysa/harness-codex",
+  "version": "0.1.0",
+  "description": "wdysa harness plugin for Codex CLI sessions",
+  "type": "module",
+  "exports": "./index.js",
+  "files": [
+    "index.js",
+    "db.js"
+  ],
+  "dependencies": {
+    "@wdysa/core": "0.1.0"
+  },
+  "keywords": [
+    "wdysa",
+    "claude-code",
+    "codex",
+    "cli"
+  ],
+  "author": "obov <obov3e@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/obov/what-did-you-say-again.git",
+    "directory": "packages/harness-codex"
+  },
+  "homepage": "https://github.com/obov/what-did-you-say-again#readme",
+  "bugs": {
+    "url": "https://github.com/obov/what-did-you-say-again/issues"
+  }
+}
