@@ -1,5 +1,5 @@
 {
-  "name": "@wdysa/core",
+  "name": "@obov/wdysa-core",
   "version": "0.1.0",
   "description": "Plugin loader and session engine for wdysa",
   "type": "module",

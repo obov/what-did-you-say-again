@@ -10,12 +10,12 @@
     "bin"
   ],
   "dependencies": {
-    "@wdysa/core": "0.1.0",
-    "@wdysa/harness-claude": "0.1.0",
-    "@wdysa/harness-codex": "0.1.0",
-    "@wdysa/output-json": "0.1.0",
-    "@wdysa/output-markdown": "0.1.0",
-    "@wdysa/output-terminal": "0.1.0"
+    "@obov/wdysa-core": "0.1.0",
+    "@obov/wdysa-harness-claude": "0.1.0",
+    "@obov/wdysa-harness-codex": "0.1.0",
+    "@obov/wdysa-output-json": "0.1.0",
+    "@obov/wdysa-output-markdown": "0.1.0",
+    "@obov/wdysa-output-terminal": "0.1.0"
   },
   "keywords": [
     "claude",

@@ -1,5 +1,5 @@
 {
-  "name": "@wdysa/output-json",
+  "name": "@obov/wdysa-output-json",
   "version": "0.1.0",
   "description": "wdysa output plugin: JSON transcript",
   "type": "module",
@@ -8,7 +8,7 @@
     "index.js"
   ],
   "dependencies": {
-    "@wdysa/core": "0.1.0"
+    "@obov/wdysa-core": "0.1.0"
   },
   "keywords": [
     "wdysa",

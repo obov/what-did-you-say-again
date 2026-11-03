@@ -40,7 +40,7 @@ Config file: `$WDYSA_CONFIG`, else `${XDG_CONFIG_HOME:-~/.config}/wdysa/config.j
   "plugins": [
     "wdysa-plugin-example",
     "./plugins/my-harness.js",
-    ["@wdysa/harness-claude", { "label": "Opus" }]
+    ["@obov/wdysa-harness-claude", { "label": "Opus" }]
   ],
   "defaults": true,
   "output": "terminal",
@@ -64,11 +64,11 @@ Plugin resolution:
 
 | Package | Provides | Options |
 |---|---|---|
-| `@wdysa/harness-claude` | harness `claude` | `root` (default `$CLAUDE_CONFIG_DIR` or `~/.claude`), `label` |
-| `@wdysa/harness-codex` | harness `codex` | `root` (default `$CODEX_HOME` or `~/.codex`), `sqliteHome` (default `$CODEX_SQLITE_HOME` or `root`), `sqlite` (`false` to scan rollout files only), `label` |
-| `@wdysa/output-terminal` | output `terminal` | Color on a tty unless `NO_COLOR` or `--no-color` |
-| `@wdysa/output-markdown` | output `markdown` | |
-| `@wdysa/output-json` | output `json` | |
+| `@obov/wdysa-harness-claude` | harness `claude` | `root` (default `$CLAUDE_CONFIG_DIR` or `~/.claude`), `label` |
+| `@obov/wdysa-harness-codex` | harness `codex` | `root` (default `$CODEX_HOME` or `~/.codex`), `sqliteHome` (default `$CODEX_SQLITE_HOME` or `root`), `sqlite` (`false` to scan rollout files only), `label` |
+| `@obov/wdysa-output-terminal` | output `terminal` | Color on a tty unless `NO_COLOR` or `--no-color` |
+| `@obov/wdysa-output-markdown` | output `markdown` | |
+| `@obov/wdysa-output-json` | output `json` | |
 
 ## Writing a plugin
 
@@ -111,7 +111,7 @@ Teaches wdysa how to find and read one agent tool's session logs. Once loaded, i
 
 `Session` = `{ id, cwd, updatedAt, title? }` plus any private fields you need in `read()` (e.g. `file`). Private fields are not passed to outputs. `updatedAt` and `time` accept a `Date`, ISO string, or epoch ms.
 
-Helpers from `@wdysa/core`: `readJsonl(file)` (async iterator, skips malformed lines), `readLines(file)`, `readFirstLine(file)`, `formatDateTime(date)`, `formatTime(date)`.
+Helpers from `@obov/wdysa-core`: `readJsonl(file)` (async iterator, skips malformed lines), `readLines(file)`, `readFirstLine(file)`, `formatDateTime(date)`, `formatTime(date)`.
 
 ### Output
 
@@ -145,12 +145,12 @@ Codex SQLite DBs live in `$CODEX_SQLITE_HOME`, else `$CODEX_HOME` (the `sqlite_h
 ```text
 packages/
   wdysa/            CLI (bin) that wires the built-in plugins
-  core/             @wdysa/core: config, plugin loader, folder lookup, turn slicing, CLI
-  harness-claude/   @wdysa/harness-claude
-  harness-codex/    @wdysa/harness-codex
-  output-terminal/  @wdysa/output-terminal
-  output-markdown/  @wdysa/output-markdown
-  output-json/      @wdysa/output-json
+  core/             @obov/wdysa-core: config, plugin loader, folder lookup, turn slicing, CLI
+  harness-claude/   @obov/wdysa-harness-claude
+  harness-codex/    @obov/wdysa-harness-codex
+  output-terminal/  @obov/wdysa-output-terminal
+  output-markdown/  @obov/wdysa-output-markdown
+  output-json/      @obov/wdysa-output-json
 test/               node:test suite with fixture logs and an example plugin
 ```
 
@@ -159,7 +159,7 @@ npm install
 npm test
 ```
 
-Publishing: every package must be published (`@wdysa/*` first, then `wdysa`):
+Publishing: every package must be published (`@obov/wdysa-*` first, then `wdysa`):
 
 ```sh
 npm publish --workspaces --access public

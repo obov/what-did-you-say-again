@@ -1,7 +1,7 @@
 import { readdir, stat } from 'node:fs/promises';
 import { homedir } from 'node:os';
 import { basename, join } from 'node:path';
-import { readFirstLine, readJsonl } from '@wdysa/core';
+import { readFirstLine, readJsonl } from '@obov/wdysa-core';
 import { HISTORY_DB, STATE_DB, openDb, query } from './db.js';
 
 const ROLLOUT = /^rollout-.*-([0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12})\.jsonl$/i;

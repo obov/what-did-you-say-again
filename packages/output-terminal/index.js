@@ -1,4 +1,4 @@
-import { formatDateTime, formatTime } from '@wdysa/core';
+import { formatDateTime, formatTime } from '@obov/wdysa-core';
 
 const RULE = 40;
 

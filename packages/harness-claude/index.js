@@ -1,7 +1,7 @@
 import { readdir, stat } from 'node:fs/promises';
 import { homedir } from 'node:os';
 import { join } from 'node:path';
-import { readJsonl, readLines } from '@wdysa/core';
+import { readJsonl, readLines } from '@obov/wdysa-core';
 
 /** Claude Code project folder name: every non-alphanumeric UTF-16 unit becomes '-'. */
 export const encodeDir = (dir) => dir.replace(/[^a-zA-Z0-9]/g, '-');

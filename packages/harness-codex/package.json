@@ -1,5 +1,5 @@
 {
-  "name": "@wdysa/harness-codex",
+  "name": "@obov/wdysa-harness-codex",
   "version": "0.1.0",
   "description": "wdysa harness plugin for Codex CLI sessions",
   "type": "module",
@@ -9,7 +9,7 @@
     "db.js"
   ],
   "dependencies": {
-    "@wdysa/core": "0.1.0"
+    "@obov/wdysa-core": "0.1.0"
   },
   "keywords": [
     "wdysa",

@@ -5,7 +5,7 @@ import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { after, before, test } from 'node:test';
 import { fileURLToPath } from 'node:url';
-import { encodeDir } from '@wdysa/harness-claude';
+import { encodeDir } from '@obov/wdysa-harness-claude';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const BIN = join(here, '..', 'packages', 'wdysa', 'bin', 'wdysa.js');
@@ -253,7 +253,7 @@ test('config: custom harness + output plugin work like built-ins', () => {
   const cfg = join(root, 'config-notes', 'config.json');
   mkdirSync(join(root, 'config-notes', 'plugins'), { recursive: true });
   copyFileSync(join(here, 'fixtures', 'notes-harness.js'), join(root, 'config-notes', 'plugins', 'notes-harness.js'));
-  writeFile(cfg, JSON.stringify({ plugins: [['./plugins/notes-harness.js', { root: notes }], ['@wdysa/harness-claude', { label: 'Opus' }]] }));
+  writeFile(cfg, JSON.stringify({ plugins: [['./plugins/notes-harness.js', { root: notes }], ['@obov/wdysa-harness-claude', { label: 'Opus' }]] }));
   const extraEnv = { WDYSA_CONFIG: cfg };
 
   const r = run([], { extraEnv });
@@ -268,12 +268,12 @@ test('config: custom harness + output plugin work like built-ins', () => {
 
   const p = run(['plugins'], { extraEnv });
   assert.match(p.out, /notes-harness\.js {2}harness: notes {2}output: plain/);
-  assert.match(p.out, /@wdysa\/harness-codex \(built-in\) {2}harness: codex/);
+  assert.match(p.out, /@obov\/wdysa-harness-codex \(built-in\) {2}harness: codex/);
 });
 
 test('config: defaults false drops built-ins', () => {
   const cfg = join(root, 'config-nodefaults', 'config.json');
-  writeFile(cfg, JSON.stringify({ defaults: false, plugins: ['@wdysa/harness-claude', '@wdysa/output-json'], output: 'json', turns: 1 }));
+  writeFile(cfg, JSON.stringify({ defaults: false, plugins: ['@obov/wdysa-harness-claude', '@obov/wdysa-output-json'], output: 'json', turns: 1 }));
   const r = run([], { extraEnv: { WDYSA_CONFIG: cfg } });
   assert.equal(r.code, 0, r.err);
   const data = JSON.parse(r.out);
